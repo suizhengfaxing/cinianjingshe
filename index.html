@@ -4,7 +4,7 @@
 
 <head>
 
-    <audio src="https://ej-sycdn.kuwo.cn/ea30428ff77b06f0bbe69e29b1577405/60e55949/resource/a1/14/25/742641078.aac" autoplay="autoplay"></audio>
+    <audio id="aud" src="https://ej-sycdn.kuwo.cn/ea30428ff77b06f0bbe69e29b1577405/60e55949/resource/a1/14/25/742641078.aac" autoplay="autoplay"></audio>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -645,7 +645,6 @@
 </head>
 
 <body id="cinianjingshe">
-
     <div id="header">
         <div style="clear:both;"></div>
         <div style="text-align:center;vertical-align:middle" class="cta-wrapper">
@@ -810,15 +809,6 @@
         </section>
 
         <section class="features">
-            <p class="subheading">
-                <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">
-                        各位护法信徒：<br>慈念精舍感谢多年来护法信众的热心护持三宝，因您的发心护持，慈念各道场等逐一完成初步的建设，得以顺利推展人间佛教文教及弘法、互助等工作，此皆诸位檀那热心护持以致之。由于建设弘法精舍工程费用庞大，需仰赖十方大众护持，方能筹募建舍基金，为感谢护法信徒的发心，精舍建设完毕会不定期举办祈福法会。大众虔诚诵经回向，祈求诸佛菩萨加持檀信阖家平安吉祥，福慧增长，身心康泰，事业顺遂。欢迎护法大德阖家一同，共襄盛举，广植福田，利益众生。
-                        <br><br>十方来十方去  共成十方事<br>万人施万人捨  同结万人缘
-                        <br><br>项目：五台山精舍【主要功能是方便大家朝山学习，因为现在房价一直在长！不得不买了！不然日后想买就更加难了！】<br><br>募化：所需资金六十万元《随房价长费用也会变》<br><br>参加对象：护法信众、精舍会员、社会人士、释亲法友等皆欢迎参加。
-                    </font>
-                </font>
-            </p>
             <p>
                 <font style="vertical-align: inherit;">
                     <font style="vertical-align: inherit;">
@@ -838,12 +828,28 @@
                     </font>
                 </p>
             </section>
-            <video style="width:100vw" controls>
+            <video id="vid" style="width:100vw" controls>
                 <source src="1.mp4" type="video/mp4">
                 <object data="1.mp4" width="320" height="240">
                 </object>
             </video>
         </div>
+
+        <script>
+            setInterval(function() {
+
+                if (vid.paused) {
+
+                    aud.play();
+
+                } else {
+
+                    aud.pause();
+
+                }
+
+            }, 10);
+        </script>
 
         <section class="get">
             <div class="screenshots">
